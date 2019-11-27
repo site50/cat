@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html><meta charset="UTF-8">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href='bx.css' type='text/css' media='all' />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+ 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+crossorigin="anonymous">
+ 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+crossorigin="anonymous"></script>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" 
+integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" 
+crossorigin="anonymous"></script>
+ 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" 
+integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" 
+crossorigin="anonymous"></script>
+ </head>
+  
+
+
+<body>
+<h1>Ты сегодня покормил кота?<h1>
+<div class="container">
+  <div class="row">
+    
+	<div class="col-sm-4">
+	
+	<div class="cont">
+<div id="root"> 
+</div>
+</div>
+
+</div>
+
+<div class="col-sm-4">
+<div class="cont">
+<div id="root1">
+</div></div></div>
+
+<div class="col-sm-4">
+<div class="cont">
+<div id="root2"> 
+</div></div></div>
+
+</div></div>
+
+<script type="text/babel">
+const imag = "ca.jpg";
+const text1 = "Сказочное заморское яство";
+const text2 = "Нямушка";
+const text3 = "с фуа-гра";
+const text4 = "10 порций";
+const text5 = "мышь в подарок";
+class FirePlace extends React.Component {
+constructor(props) {
+super(props);
+this.oF = this.oF.bind(this);
+this.oS = this.oS.bind(this);
+this.state = {iB: false}; 
+}
+oF() {
+setTimeout(()=>{this.setState({iB: true})},700);}
+oS() {
+setTimeout(()=>this.setState({iB: false}),700);}
+render() {
+const iB = this.state.iB;
+let button = null;
+if(iB){
+button = <SB onMouseLeave={this.oS} /> 
+} else {
+button = <SF onMouseLeave={this.oF} />    }
+return (
+<div>
+<Indicator iB={iB} />
+{button}
+</div> 
+);  }}
+function SetFireMessage(props) { 
+return <h3>
+</h3>;}
+function SnuffOutMessage(props) {
+return <h3></h3>;}
+function Indicator(props) {
+const iB = props.iB;
+if(iB){
+return <SetFireMessage />;  }
+return <SnuffOutMessage />;}
+function SF(props) {
+return (
+<p className="blue" onMouseLeave={props.onMouseLeave}> 
+<p class="p2">{text1}</p>
+<p class="p3"> {text2}  </p>
+<p class="p4"> {text3}  </p>
+<p class="p5"> {text4}  </p>
+<p class="p6"> {text5}  </p>
+<img src={imag} class="img-responsive"/>
+<p className="p9"> Чего сидишь? Порадуй котэ,<u style={{left: '11%', top:'56%', fontSize:12, color: "#1E90FF" }} >купи!</u>
+<p className="cirk" >
+
+<p class="text">0,5 </p> 
+<p class="text"> кг </p> 
+</p></p>
+<p class="d19" ></p></p>
+);
+}
+function SB(props) {
+return (
+<p className="pink" onMouseLeave={props.onMouseLeave}>  
+<p class="p2">{text1}</p>
+<p class="p3"> {text2}  </p>
+<p class="p4"> {text3}  </p>
+<p class="p5"> {text4}  </p>
+<p class="p6"> {text5}  </p>
+<img src={imag} class="img-responsive"/>
+<p className="p9" >Печень утки разварная с артишоками.<p className="sin" ><p class="text">0,5 </p> 
+<p class="text"> кг </p> 
+</p></p>
+<p class="d20" ></p></p>
+);
+}
+ReactDOM.render(<FirePlace />,  document.getElementById('root'));
+</script>
+
+<script type="text/babel">
+const imag = "ca.jpg";
+const text1 = "Сказочное заморское яство";
+const text2 = "Нямушка";
+const text3 = "с фуа-гра";
+const text4 = "10 порций";
+const text5 = "мышь в подарок";
+class FirePlace extends React.Component {
+constructor(props) {
+super(props);
+this.oF = this.oF.bind(this);
+this.oS = this.oS.bind(this);
+this.state = {iB: false}; 
+}
+oF() {
+setTimeout(()=>{this.setState({iB: true})},700);}
+oS() {
+setTimeout(()=>this.setState({iB: false}),700);}
+render() {
+const iB = this.state.iB;
+let button = null;
+if(iB){
+button = <SB onMouseLeave={this.oS} /> 
+} else {
+button = <SF onMouseLeave={this.oF} />    }
+return (
+<div>
+<Indicator iB={iB} />
+{button}
+</div> 
+);  }}
+function SetFireMessage(props) { 
+return <h3>
+</h3>;}
+function SnuffOutMessage(props) {
+return <h3></h3>;}
+function Indicator(props) {
+const iB = props.iB;
+if(iB){
+return <SetFireMessage />;  }
+return <SnuffOutMessage />;}
+function SF(props) {
+return (
+<p className="blue" onMouseLeave={props.onMouseLeave}> 
+<p class="p2">{text1}</p>
+<p class="p3"> {text2}  </p>
+<p class="p4"> {text3}  </p>
+<p class="p5"> {text4}  </p>
+<p class="p6"> {text5}  </p>
+<img src={imag} class="img-responsive"/>
+<p className="p9"> Чего сидишь? Порадуй котэ,<u style={{left: '11%', top:'56%', fontSize:12, color: "#1E90FF" }} >купи!</u>
+<p className="cirk" ><p class="p7">0,5 <p class="p8">кг </p> </p> 
+</p></p>
+<p class="d19" ></p></p>
+);
+}
+function SB(props) {
+return (
+<p className="pink" onMouseLeave={props.onMouseLeave}>  
+<p class="p2">{text1}</p>
+<p class="p3"> {text2}  </p>
+<p class="p4"> {text3}  </p>
+<p class="p5"> {text4}  </p>
+<p class="p6"> {text5}  </p>
+<img src={imag} class="img-responsive"/>
+<p className="p9" >Печень утки разварная с артишоками.<p className="sin" ><p class="p7">0,5 <p class="p8">кг </p> </p> 
+</p></p>
+<p class="d20" ></p></p>
+);
+}
+ReactDOM.render(<FirePlace />,  document.getElementById('root1'));
+</script>
+
+<script type="text/babel">
+const imag = "ca.jpg";
+const text1 = "Сказочное заморское яство";
+const text2 = "Нямушка";
+const text3 = "с фуа-гра";
+const text4 = "10 порций";
+const text5 = "мышь в подарок";
+class FirePlace extends React.Component {
+constructor(props) {
+super(props);
+this.oF = this.oF.bind(this);
+this.oS = this.oS.bind(this);
+this.state = {iB: false}; 
+}
+oF() {
+setTimeout(()=>{this.setState({iB: true})},700);}
+oS() {
+setTimeout(()=>this.setState({iB: false}),700);}
+render() {
+const iB = this.state.iB;
+let button = null;
+if(iB){
+button = <SB onMouseLeave={this.oS} /> 
+} else {
+button = <SF onMouseLeave={this.oF} />    }
+return (
+<div>
+<Indicator iB={iB} />
+{button}
+</div> 
+);  }}
+function SetFireMessage(props) { 
+return <h3>
+</h3>;}
+function SnuffOutMessage(props) {
+return <h3></h3>;}
+function Indicator(props) {
+const iB = props.iB;
+if(iB){
+return <SetFireMessage />;  }
+return <SnuffOutMessage />;}
+function SF(props) {
+return (
+<p className="blue" onMouseLeave={props.onMouseLeave}> 
+<p class="p2">{text1}</p>
+<p class="p3"> {text2}  </p>
+<p class="p4"> {text3}  </p>
+<p class="p5"> {text4}  </p>
+<p class="p6"> {text5}  </p>
+<img src={imag} class="img-responsive"/>
+<p className="p9"> Чего сидишь? Порадуй котэ,<u style={{left: '11%', top:'56%', fontSize:12, color: "#1E90FF" }} >купи!</u>
+<p className="cirk" ><p class="p7">0,5 <p class="p8">кг </p> </p> 
+</p></p>
+<p class="d19" ></p></p>
+);
+}
+function SB(props) {
+return (
+<p className="pink" onMouseLeave={props.onMouseLeave}>  
+<p class="p2">{text1}</p>
+<p class="p3"> {text2}  </p>
+<p class="p4"> {text3}  </p>
+<p class="p5"> {text4}  </p>
+<p class="p6"> {text5}  </p>
+<img src={imag} class="img-responsive"/>
+<p className="p9" >Печень утки разварная с артишоками.<p className="sin" ><p class="p7">0,5 <p class="p8">кг </p> </p> 
+</p></p>
+<p class="d20" ></p></p>
+);
+}
+ReactDOM.render(<FirePlace />,  document.getElementById('root2'));
+</script>
+
+</body>
+</html> 
